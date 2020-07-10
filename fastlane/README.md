@@ -31,6 +31,11 @@ Execute debug lint
 fastlane android ktlint
 ```
 Execute Ktlint Verification
+### android detekt
+```
+fastlane android detekt
+```
+Execute Detekt Verification
 ### android analysis
 ```
 fastlane android analysis

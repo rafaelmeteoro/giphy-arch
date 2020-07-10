@@ -1,8 +1,10 @@
 ext {
     versions = [
-            'ktlint': '0.37.1'
+            'ktlint': '0.37.1',
+            'detekt': '1.9.1'
     ]
     libraries = [
-            'ktlint': "com.pinterest:ktlint:${versions.ktlint}"
+            'ktlint': "com.pinterest:ktlint:${versions.ktlint}",
+            'detekt': "io.gitlab.arturbosch.detekt:detekt-cli:${versions.detekt}"
     ]
 }
