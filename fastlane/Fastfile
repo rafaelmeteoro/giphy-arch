@@ -17,6 +17,11 @@ default_platform(:android)
 
 platform :android do
 
+  desc "Show updates dependencies"
+  lane :dependency_updates do
+    gradle(task: "dependencyUpdates")
+  end
+
   desc "Compile debug and test sources"
   lane :compile do
     gradle(task: "compileDebugSources")

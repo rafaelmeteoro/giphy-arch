@@ -16,6 +16,11 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## Android
+### android dependency_updates
+```
+fastlane android dependency_updates
+```
+Show updates dependencies
 ### android compile
 ```
 fastlane android compile
