@@ -1,3 +1,4 @@
+include ':repository'
 include ':localdata'
 include ':network'
 include ':app'
