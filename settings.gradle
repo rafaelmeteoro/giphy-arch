@@ -1,3 +1,4 @@
+include ':localdata'
 include ':network'
 include ':app'
 rootProject.name = "Giphy"
