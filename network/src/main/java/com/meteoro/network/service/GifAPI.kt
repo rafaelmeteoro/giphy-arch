@@ -6,6 +6,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface GifAPI {
-    @GET("tranding")
+    @GET("trending")
     suspend fun getTrendingGIFs(@Query("api_key") apiKey: String = BuildConfig.GIPHY_API_KEY): GifResponse
 }
