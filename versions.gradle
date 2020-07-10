@@ -1,0 +1,8 @@
+ext {
+    versions = [
+            'ktlint': '0.37.1'
+    ]
+    libraries = [
+            'ktlint': "com.pinterest:ktlint:${versions.ktlint}"
+    ]
+}
