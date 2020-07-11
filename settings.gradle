@@ -1,3 +1,4 @@
+include ':favorite'
 include ':repository'
 include ':localdata'
 include ':network'

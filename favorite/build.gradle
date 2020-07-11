@@ -1,0 +1,45 @@
+apply plugin: "com.android.dynamic-feature"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: "${rootDir}/config/ktlint/ktlint.gradle"
+apply from: "${rootDir}/config/detekt/detekt.gradle"
+apply from: "${rootDir}/versions.gradle"
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(":app")
+    implementation project(':repository')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$versions.appCompat"
+    implementation "androidx.core:core-ktx:$versions.coreKtx"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayout"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.viewModel"
+    implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
+    implementation "org.koin:koin-android-viewmodel:$versions.koin"
+    implementation "com.google.android.play:core:$versions.playcore"
+    implementation "androidx.legacy:legacy-support-v4:$versions.androidXLegacy"
+
+    testImplementation "junit:junit:$versions.junit"
+    testImplementation "androidx.arch.core:core-testing:$versions.coreTesting"
+    testImplementation "io.mockk:mockk:$versions.mockk"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines"
+    androidTestImplementation "androidx.test.ext:junit:$versions.androidXJunit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espressoCore"
+}

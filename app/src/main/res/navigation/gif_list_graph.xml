@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:toosl="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/gif_list_graph"
     app:startDestination="@id/gifListFragment">
 
@@ -9,6 +9,17 @@
         android:id="@+id/gifListFragment"
         android:name="com.meteoro.giphy.giflist.GifListFragment"
         android:label="GifListFragment"
-        toosl:layout="@layout/fragment_gif_list" />
+        tools:layout="@layout/fragment_gif_list">
+        <action
+            android:id="@+id/actionToFavorite"
+            app:destination="@id/favoriteGifListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteGifListFragment"
+        android:name="com.meteoro.favorite.FavoriteGifListFragment"
+        android:label="FavoriteGifListFragment"
+        app:moduleName="favorite"
+        tools:layout="@layout/fragment_gif_list" />
 
 </navigation>
